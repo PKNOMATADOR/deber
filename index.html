@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tarea - Uso de Bootstrap y JavaScript - PIERO MENDOZA</title>
+  <link rel="stylesheet" href="formulario.css">
+</head>
+<body>
+  <h2>Formulario de Registro</h2>
+  <form id="formulario" enctype="multipart/form-data">
+    <fieldset class="form-section">
+      <legend>Datos Personales</legend>
+      <div class="row">
+        <div class="col">
+          <label for="cedula">Cédula:</label>
+          <input type="text" id="cedula" name="cedula" required>
+        </div>
+        <div class="col">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div class="col">
+          <label for="apellido">Apellido:</label>
+          <input type="text" id="apellido" name="apellido" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label for="direccion">Dirección:</label>
+          <textarea id="direccion" name="direccion" rows="2"></textarea>
+        </div>
+        <div class="col">
+          <label for="telefono">Teléfono:</label>
+          <input type="tel" id="telefono" name="telefono">
+        </div>
+        <div class="col">
+          <label for="correo">Correo electrónico:</label>
+          <input type="email" id="correo" name="correo">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+          <input type="date" id="fecha_nacimiento" name="fecha_nacimiento">
+        </div>
+        <div class="col">
+          <label for="hora_cita">Hora de cita:</label>
+          <input type="time" id="hora_cita" name="hora_cita">
+        </div>
+        <div class="col">
+          <label for="contrasena">Contraseña:</label>
+          <input type="password" id="contrasena" name="contrasena">
+        </div>
+      </div>
+    </fieldset>
+    <fieldset class="form-section">
+      <legend>Preferencias</legend>
+      <div class="row">
+        <div class="col">
+          <label for="genero">Género:</label>
+          <select id="genero" name="genero">
+            <option value="">Seleccione</option>
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
+        <div class="col">
+          <label>Estado civil:</label>
+          <label><input type="radio" name="estado_civil" value="soltero" checked> Soltero</label>
+          <label><input type="radio" name="estado_civil" value="casado"> Casado</label>
+          <label><input type="radio" name="estado_civil" value="otro"> Otro</label>
+        </div>
+        <div class="col">
+          <label for="hobbies">Hobbies:</label>
+          <label><input type="checkbox" name="hobbies" value="lectura"> Lectura</label>
+          <label><input type="checkbox" name="hobbies" value="deportes"> Deportes</label>
+          <label><input type="checkbox" name="hobbies" value="viajar"> Viajar</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <label for="pais">País:</label>
+          <input list="paises" id="pais" name="pais" placeholder="Escriba o seleccione">
+          <datalist id="paises">
+            <option value="Ecuador">
+            <option value="Perú">
+            <option value="Colombia">
+            <option value="México">
+            <option value="España">
+          </datalist>
+        </div>
+        <div class="col">
+          <label for="comentarios">Comentarios:</label>
+          <textarea id="comentarios" name="comentarios" rows="2"></textarea>
+        </div>
+      </div>
+    </fieldset>
+    <div class="form-section">
+      <label>
+        <input type="checkbox" required>
+        Acepto los términos y condiciones.
+      </label>
+    </div>
+    <button type="submit">Enviar</button>
+  </form>
+  <h3>Datos Ingresados:</h3>
+  <div id="resultado"></div>
+  <script src="formulario.js"></script>
+</body>
+</html>
